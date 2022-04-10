@@ -1,3 +1,4 @@
+package string;
 //https://prepinsta.com/hackerrank-coding-question-placements-4/
 
 //Write a program to print all Subsequences of String which Start with Vowel and End with Consonant

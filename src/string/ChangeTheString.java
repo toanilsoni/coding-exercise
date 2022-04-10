@@ -1,3 +1,4 @@
+package string;
 //https://practice.geeksforgeeks.org/problems/change-the-string3541/1/?company[]=Oracle&company[]=Oracle&page=1&query=company[]Oraclepage1company[]Oracle
 
 public class ChangeTheString {

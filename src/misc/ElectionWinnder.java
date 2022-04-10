@@ -1,3 +1,4 @@
+package misc;
 //https://prepinsta.com/hackerrank-coding-question-placements-5/
 
 import java.util.HashMap;

@@ -1,3 +1,4 @@
+package misc;
 /*
  * ValidDNACheck a boolean for the if and else statement to mean that if it contains ATG and TGA and their differences in their index is divisible by 3 with no remainder, then it is a protein.
  */

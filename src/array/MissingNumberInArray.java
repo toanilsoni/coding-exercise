@@ -1,3 +1,4 @@
+package array;
 //https://javarevisited.blogspot.com/2014/11/how-to-find-missing-number-on-integer-array-java.html#axzz7Q1I8VRMv
 public class MissingNumberInArray {
 
