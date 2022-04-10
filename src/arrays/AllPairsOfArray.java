@@ -11,7 +11,7 @@ public class AllPairsOfArray {
   public static void allPairsOfArray(int[] array) {
 
     for (int k = 0 ; k < array.length; k++) {
-      System.out.print(allPairsOfArray[k] + " ");
+      //System.out.print(allPairsOfArray[] + " ");
     }
 
   }
