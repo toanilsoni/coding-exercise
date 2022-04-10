@@ -1,9 +1,7 @@
 package streams;
 
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class TopNFrequency {
 
@@ -16,7 +14,7 @@ public class TopNFrequency {
 
 	}
 
-	public static Map<Integer, Long> topNFrequency(int n, int[] array) {
+	/*public static Map<Integer, Long> topNFrequency(int n, int[] array) {
 
 		Map<Integer, Long> resultMap = Arrays.stream(array).limit(n).boxed()
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
@@ -25,6 +23,27 @@ public class TopNFrequency {
 				.forEach(number -> System.out.println("Key: " + number.getKey() + " Values: " + number.getValue()));
 
 		return resultMap;
+
+	}*/
+	
+	public static Map<Integer, Integer> topNFrequency(int frequency, int[] numbers) {
+
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+
+		for (int n : numbers) {
+			if (map.containsKey(n)) {
+				map.put(n, map.get(n) + 1);
+			} else {
+				map.put(n, 1);
+			}
+		}
+		
+		for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			if(entry.getValue()>=frequency) {
+				System.out.println(entry.getKey());
+			}
+		}
+		return map;
 
 	}
 

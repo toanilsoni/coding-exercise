@@ -1,6 +1,4 @@
 package misc;
-import java.util.Arrays;
-import java.util.LinkedList;
 
 public class MergeSortedLinkedList {
 
@@ -43,28 +41,28 @@ public class MergeSortedLinkedList {
 
 		ListNode result = new ListNode();
 
-		ListNode p = result;
+		ListNode currentNode = result;
 
 		while (list1 != null && list2 != null) {
 
 			if (list1.val <= list2.val) {
-				p.next = list1;
+				currentNode.next = list1;
 				list1 = list1.next;
 			} else {
-				p.next = list2;
+				currentNode.next = list2;
 				list2 = list2.next;
 			}
 
-			p = p.next;
+			currentNode = currentNode.next;
 
 		}
 
 		if (list1 == null) {
-			p.next = list2;
+			currentNode.next = list2;
 		}
 
 		else if (list2 == null) {
-			p.next = list1;
+			currentNode.next = list1;
 		}
 
 		return result.next;
