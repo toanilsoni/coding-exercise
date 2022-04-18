@@ -1,23 +1,21 @@
 package array;
-
+//https://javarevisited.blogspot.com/2014/11/how-to-find-missing-number-on-integer-array-java.html#axzz7Q1I8VRMv
 public class FindAMissingNumberInArray {
 
-	public static void main(String[] args) {
+	public static void main(String args[]) {
 
-		int[] array = { 1, 3, 4};
-
-		System.out.print(findAMissingNumberInArray(array));
+		int[] numbers = { 1, 2, 3, 5 };
+		System.out.println(findAMissingNumber(numbers, numbers.length + 1));
 	}
 
-	public static int findAMissingNumberInArray(int[] array) {
-		int totalCount = array.length + 1;
-		int expectedSum = totalCount * (totalCount + 1) / 2;
-		int actualSum = 0;
-		for (int i : array) {
-			actualSum += i;
-		}
-		return expectedSum - actualSum;
+	static int findAMissingNumber(int[] numbers, int n) {
+		int exptectedCount = n * ((n + 1) / 2);
+		int actualCount = 0;
 
+		for (int i : numbers) {
+			actualCount = actualCount + i;
+		}
+		return exptectedCount - actualCount;
 	}
 
 }

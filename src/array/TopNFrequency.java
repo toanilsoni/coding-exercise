@@ -1,4 +1,4 @@
-package streams;
+package array;
 
 import java.util.HashMap;
 import java.util.Map;

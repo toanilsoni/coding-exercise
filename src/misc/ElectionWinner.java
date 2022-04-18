@@ -1,10 +1,11 @@
-package misc;
 //https://prepinsta.com/hackerrank-coding-question-placements-5/
+
+package misc;
 
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-public class ElectionWinnder {
+public class ElectionWinner {
 
 	public static void main(String[] args) {
 
