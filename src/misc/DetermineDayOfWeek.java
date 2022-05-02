@@ -1,4 +1,3 @@
-//https://prepinsta.com/hackerrank-coding-question-placements-5/
 
 package misc;
 

@@ -20,12 +20,12 @@ public class RemoveDuplicatesFromArray {
 		int previous = numbers[0];
 		result[0] = previous;
 
-		for (int k = 1; k < numbers.length; k++) {
+		for (int i = 1; i < numbers.length; i++) {
 
-			if (previous != numbers[k]) {
-				result[k] = numbers[k];
+			if (previous != numbers[i]) {
+				result[i] = numbers[i];
 			}
-			previous = numbers[k];
+			previous = numbers[i];
 
 		}
 

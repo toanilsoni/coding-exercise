@@ -3,8 +3,8 @@ package array;
 public class RainDropTrapBruteForce {
 
     public static void main(String[] args) {
-        System.out.println("==Hello==");
-        int [] arr = {3, 0, 2, 0, 4};
+        //int [] arr = {3, 0, 2, 0, 4};
+        int [] arr = {1, 0, 1};
         int length = arr.length;
 
         System.out.println(trap(arr, length));
@@ -17,7 +17,6 @@ public class RainDropTrapBruteForce {
         int [] rightMax = new int[length];
 
         for (int i=0; i<length; i++){
-            System.out.println(arr[i]);
             if(i==0){
                 leftMax[i] = arr[i];
                 rightMax[length-1] = arr[length-1];

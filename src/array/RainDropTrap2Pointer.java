@@ -2,7 +2,6 @@ package array;
 public class RainDropTrap2Pointer {
 
     public static void main(String[] args) {
-        System.out.println("==Hello==");
         int [] arr = {3, 0, 2, 0, 4};
         int length = arr.length;
 

@@ -1,4 +1,4 @@
-package misc;
+package invitae;
 /*
  * Complement a DNA sequence in Java or RNA complement of a given DNA strand java
  */
