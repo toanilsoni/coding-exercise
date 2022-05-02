@@ -9,9 +9,11 @@ public class FindDuplicateNumberInArray {
 
 	public static void main(String[] args) {
 
-		int[] numbers = { 1, 2, 2, 3, 4 };
+		int[] numbers = { 1, 2, 3, 4, 2};
 
-		findDuplicateNumberInArray(numbers);
+		//findDuplicateNumberInArray(numbers);
+
+		 printRepeating(numbers, numbers.length);
 	}
 
 	public static void findDuplicateNumberInArray(int[] numbers) {
@@ -35,7 +37,7 @@ public class FindDuplicateNumberInArray {
 
 	}
 
-	void printRepeating(int arr[], int size) {
+	public static void printRepeating(int arr[], int size) {
 		int i, j;
 		System.out.println("Repeated Elements are :");
 		for (i = 0; i < size - 1; i++) {

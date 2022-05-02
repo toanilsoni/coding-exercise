@@ -11,7 +11,8 @@ public class StringStartVowelAndEndConsonant {
 
 	public static void main(String[] args) {
 
-		String input = "xabcef";
+		//String input = "xabcef";
+		String input = "abc";
 		// ab, ac, abc
 		subsequence(input);
 		System.out.println(hsString);

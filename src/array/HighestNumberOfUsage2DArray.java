@@ -47,10 +47,11 @@ public class HighestNumberOfUsage2DArray {
 		ArrayList<List<String>> logList = new ArrayList<List<String>>();
 
 		HashMap<String, Integer> logMap = new HashMap<String, Integer>();
-
+		
 		for (String[] log : logs) {
 			logList.add(Arrays.asList(log));
 		}
+		
 		int i = 0;
 		for (List<String> str : logList) {
 
@@ -72,5 +73,38 @@ public class HighestNumberOfUsage2DArray {
 
 		return -1;
 	}
+	
+
+
+	/*HashMap<String, List<Integer>> logMap = new HashMap<String, List<Integer>>();
+	
+	for(int i=0; i<logs.length; i++) {
+		if(logMap.containsKey(logs[i][2])) {
+			List<Integer> timeList = logMap.get(logs[i][2]);
+			timeList.add(Integer.parseInt(logs[i][0]));
+			logMap.put(logs[i][2], timeList);
+			
+		} else {
+			List<Integer> timeList = new ArrayList<Integer>();
+			timeList.add(Integer.parseInt(logs[i][0]));
+			logMap.put(logs[i][2], timeList);
+			
+		}
+	}
+
+
+	int highUsage = 0;
+	
+	for (Map.Entry<String, List<Integer>> entry : logMap.entrySet()) {
+		System.out.println(entry.getKey() + " " + entry.getValue());
+		
+		if( entry.getValue().size() >highUsage) {
+			highUsage =  entry.getValue().size();
+		}
+		
+	}
+	
+	return highUsage;*/
+
 
 }

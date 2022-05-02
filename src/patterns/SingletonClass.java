@@ -1,4 +1,4 @@
-package misc;
+package patterns;
 class SingletonEager {
 
 	private static SingletonEager singletonObj = new SingletonEager();

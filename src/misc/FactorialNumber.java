@@ -2,7 +2,7 @@ package misc;
 public class FactorialNumber {
 
     public static void main(String[] args) {
-        int num = 2;
+        int num = 3;
         long factorial = multiplyNumbers(num);
         System.out.println("Factorial of " + num + " = " + factorial);
     }

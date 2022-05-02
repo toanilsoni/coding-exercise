@@ -9,7 +9,7 @@ public class FindAMissingNumberInArray {
 	}
 
 	static int findAMissingNumber(int[] numbers, int n) {
-		int exptectedCount = n * ((n + 1) / 2);
+		int exptectedCount = (n * (n + 1)) / 2;
 		int actualCount = 0;
 
 		for (int i : numbers) {

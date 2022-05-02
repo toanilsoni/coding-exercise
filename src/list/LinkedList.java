@@ -81,12 +81,13 @@ public class LinkedList {
 		last = previous;
 		last.next = null;
 	}
-	
-	private Node getPreviousNode(Node node){
+
+	private Node getPreviousNode(Node node) {
 		Node currentNode = first;
 
 		while (currentNode != null) {
-			if(currentNode.next == node) return currentNode;
+			if (currentNode.next == node)
+				return currentNode;
 			currentNode = currentNode.next;
 		}
 		return null;

@@ -2,7 +2,8 @@ package array;
 public class PlusOneArray {
 
     public static void main(String[] args) {
-        int[] arr = {4, 3, 2, 9};
+        //int[] arr = {4, 3, 2, 9};
+    	int[] arr = {9, 9};
         int length = arr.length;
 
         //System.out.println(plusOneBruteForce(arr, length));
@@ -35,6 +36,7 @@ public class PlusOneArray {
         }
         if (data[0] == 0) {
             int [] newData = new int[length+1];
+            newData = data;
             newData[0] = 1;
             return newData;
         }
