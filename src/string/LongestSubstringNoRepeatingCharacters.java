@@ -31,6 +31,7 @@ public class LongestSubstringNoRepeatingCharacters {
 
 		}
 
+		System.out.println(result);
 		System.out.println(maxLength);
 	}
 }
