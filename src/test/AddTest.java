@@ -1,6 +1,7 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +13,7 @@ class AddTest {
 	
 	Add add;
 
-    @BeforeEach                                         
+    @BeforeEach
     void setUp() {
         add = new Add();
     }
