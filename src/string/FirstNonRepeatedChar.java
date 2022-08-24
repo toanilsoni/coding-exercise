@@ -1,6 +1,8 @@
 package string;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -11,7 +13,8 @@ public class FirstNonRepeatedChar {
 		System.out.print(checkRepeatedChar(str));
 	}
 
-	private static Character checkRepeatedChar(String str) {
+	private static StringBuilder checkRepeatedChar(String str) {
+		StringBuilder strB = new StringBuilder();
 		Character charValue = 0;
 		Map<Character, Integer> strMap = new HashMap<Character, Integer>();
 		for (int i = 0; i < str.length(); i++) {
@@ -27,10 +30,10 @@ public class FirstNonRepeatedChar {
 
 		for (Entry<Character, Integer> entryValue : strMap.entrySet()) {
 			if (entryValue.getValue() == 1) {
-				return entryValue.getKey();
+				strB.append(entryValue.getKey());
 			}
 		}
-		return charValue;
+		return strB;
 
 	}
 

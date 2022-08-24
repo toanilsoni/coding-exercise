@@ -11,7 +11,6 @@ public class SortCharactersByFrequency {
 
 		String inputStr = "tree";
 		System.out.println(sortCharactersByFrequency(inputStr));
-
 	}
 
 	private static String sortCharactersByFrequency(String inputStr) {
@@ -36,5 +35,4 @@ public class SortCharactersByFrequency {
 				});
 		return sb.toString();
 	}
-
 }

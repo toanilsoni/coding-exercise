@@ -5,7 +5,6 @@ public class ReverseString {
 	public static void main(String[] args) {
 		String str = "ABC";
 		System.out.println(reverse(str));
-
 	}
 
 	public static String reverse(String str) {

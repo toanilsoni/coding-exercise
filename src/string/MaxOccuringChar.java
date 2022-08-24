@@ -23,7 +23,6 @@ public class MaxOccuringChar {
 			} else {
 				charMap.put(c, 1);
 			}
-
 		}
 
 		System.out.println(charMap);

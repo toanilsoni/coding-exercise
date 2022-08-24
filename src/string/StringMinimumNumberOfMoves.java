@@ -7,11 +7,8 @@ import java.util.Arrays;
 public class StringMinimumNumberOfMoves {
 
     public static void main(String[] args) {
-
         String str = "baaaaa";
-
         System.out.println(solution(str));
-
     }
 
     private static int solution(String s) {

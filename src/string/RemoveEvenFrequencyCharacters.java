@@ -19,13 +19,11 @@ public class RemoveEvenFrequencyCharacters {
 
 		HashMap<Character, Integer> charMap = new HashMap<>();
 		for (char c : inputStr.toCharArray()) {
-
 			if (charMap.containsKey(c)) {
 				charMap.put(c, charMap.get(c) + 1);
 			} else {
 				charMap.put(c, 1);
 			}
-
 		}
 
 		System.out.println(charMap);
@@ -57,7 +55,6 @@ public class RemoveEvenFrequencyCharacters {
 			} else {
 				charMap.put(c, 1);
 			}
-
 		}
 
 		System.out.println(charMap);

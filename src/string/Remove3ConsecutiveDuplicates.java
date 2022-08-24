@@ -17,25 +17,21 @@ public class Remove3ConsecutiveDuplicates {
 		Vector<Character> vChar = new Vector<>();
 
 		for (int i = 0; i < str.length(); i++) {
-
 			vChar.add(str.charAt(i));
-
 			if (vChar.size() > 2) {
 				int vSize = vChar.size();
 				if ((vChar.get(vSize - 1) == vChar.get(vSize - 2)) && (vChar.get(vSize - 2) == vChar.get(vSize - 3))) {
 					vChar.setSize(vSize - 3);
-
 				}
-
 			}
-
 		}
 
+		StringBuilder strb = new StringBuilder();
 		for (int j = 0; j < vChar.size(); j++) {
-			System.out.println(vChar.get(j));
+			strb.append(vChar.get(j));
 		}
 
-		return "";
+		return strb.toString();
 	}
 
 }
