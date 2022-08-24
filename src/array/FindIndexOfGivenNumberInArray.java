@@ -1,7 +1,7 @@
 //https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
 package array;
 
-public class FindNumberIndexInArray {
+public class FindIndexOfGivenNumberInArray {
 
 	public static void main(String[] args) {
 

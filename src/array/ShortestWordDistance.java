@@ -56,7 +56,7 @@ public class ShortestWordDistance {
 
 		shortest = Math.min(shortest, Math.abs(l - r));
 
-		System.out.print("shortest" + shortest);
+		System.out.print("shortest: " + shortest);
 	}
 
 }

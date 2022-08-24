@@ -2,18 +2,33 @@
 
 package array;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FindDuplicateNumberInArray {
 
 	public static void main(String[] args) {
 
-		int[] numbers = { 1, 2, 3, 4, 2};
+		Integer[] numbers = { 1, 2, 3, 4, 2};
 
 		//findDuplicateNumberInArray(numbers);
 
-		 printRepeating(numbers, numbers.length);
+		//printRepeating(numbers, numbers.length);
+
+		printDuplicateElementsFromArray(numbers);
+	}
+
+	public static void printDuplicateElementsFromArray(Integer[] array) {
+
+		Stream<Integer> stream = Arrays.stream(array);
+
+		Set<Integer> numbers = new HashSet<>();
+
+		List<Integer> result = stream.filter(n -> !numbers.add(n)).collect(Collectors.toList());
+
+		System.out.println("Duplicates: " + result);
+
 	}
 
 	public static void findDuplicateNumberInArray(int[] numbers) {
@@ -34,7 +49,6 @@ public class FindDuplicateNumberInArray {
 			}
 
 		}
-
 	}
 
 	public static void printRepeating(int arr[], int size) {

@@ -4,7 +4,7 @@ public class SortArrayOfString {
 
 	public static void main(String[] args) {
 
-		String str[] = { "Anil", "Am", "I" };
+		String str[] = { "Anil", "AL", "Am", "I" };
 
 		// String [] result = sort(str, str.length);
 

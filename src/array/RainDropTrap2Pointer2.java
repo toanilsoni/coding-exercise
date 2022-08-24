@@ -21,7 +21,7 @@ public class RainDropTrap2Pointer2 {
         while (i < j) {
             if (data[i] <= data[j]) {
                 leftMax = Math.max(data[i], leftMax); // 1
-                water = water + leftMax - data[i]; //0 + 1 - 0 = 1
+                water = water + leftMax - data[i]; //0 + 1 - 1 = 0
                 i++;
             } else {
                 rightMax = Math.max(data[j], rightMax);

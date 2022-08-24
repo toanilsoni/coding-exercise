@@ -2,15 +2,30 @@
 package array;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class RemoveDuplicatesFromArray {
 
 	public static void main(String[] args) {
 
-		int[] numbers = { 1, 1, 2, 2, 3, 4, 5 };
+		Integer[] numbers = { 1, 1, 2, 2, 3, 4, 5 };
 
-		System.out.println(Arrays.toString(removeDuplicatesFromArray(numbers)));
+		System.out.println(removeDuplicatesFromArrayStream(numbers));
+		//System.out.println(Arrays.toString(removeDuplicatesFromArray(numbers)));
 
+	}
+
+	public static List<Integer> removeDuplicatesFromArrayStream(Integer[] numbers) {
+
+		List<Integer> listInt = Arrays.asList(numbers);
+
+		Map<Integer, Long> map = listInt.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+		List<Integer> result = listInt.stream().filter(n -> map.get(n) ==1 ).collect(Collectors.toList());
+
+		return result;
 	}
 
 	public static int[] removeDuplicatesFromArray(int[] numbers) {
