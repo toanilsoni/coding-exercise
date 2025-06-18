@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.codingexcercise</groupId>
-    <artifactId>running-unit-tests</artifactId>
+    <artifactId>codingexcercise</artifactId>
     <version>0.1</version>
-    <name>Running Unit Tests</name>
+    <name>Running Coding Excercise</name>
     <description>
         This example demonstrates how you can run unit tests which use JUnit 5.
     </description>
@@ -31,7 +31,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>running-unit-tests</finalName>
+        <finalName>codingexcercise</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
