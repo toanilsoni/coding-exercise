@@ -50,7 +50,6 @@ public class ShortestWordDistance {
 				l = i;
 			} else if (array[i].equals(end)) {
 				r = i;
-
 			}
 		}
 

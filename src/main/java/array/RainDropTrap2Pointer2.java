@@ -31,7 +31,6 @@ public class RainDropTrap2Pointer2 {
 
         }
 
-
         return water;
 
     }

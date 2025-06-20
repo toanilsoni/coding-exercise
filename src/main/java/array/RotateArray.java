@@ -1,4 +1,4 @@
-//https://javarevisited.blogspot.com/2014/08/how-to-find-all-pairs-in-array-of-integers-whose-sum-equal-given-number-java.html#axzz7Q1I8VRMv
+//Rotate the array right by k positions.
 
 package array;
 
@@ -9,11 +9,10 @@ public class RotateArray {
 	public static void main(String[] args) {
 
 		int[] array = { 1, 2, 3, 4, 5, 6, 7 };
-		int size = 7;
 		int k = 3;
 
-		//rotateArray(array, size, k);
-		rotateArrayApproach2(array, size, k);
+		//rotateArray(array, array.length, k);
+		rotateArrayApproach2(array, array.length, k);
 	}
 
 	public static void rotateArray(int[] array, int size, int k) {
@@ -22,25 +21,22 @@ public class RotateArray {
 
 		for (int i = 0; i < k; i++) {
 			result[i] = array[array.length - k + i];
-
 		}
 
 		int j = 0;
 		for (int i = k; i < array.length; i++) {
-
 			result[i] = array[j];
 			j++;
-
 		}
 
 		System.out.println(Arrays.toString(result));
 
 	}
 	
-	public static void rotateArrayApproach2(int[] arr, int size, int order) {
+	public static void rotateArrayApproach2(int[] arr, int size, int index) {
 		//{ 1, 2, 3, 4, 5, 6, 7 };
-		
-		for (int i = 0; i < order; i++) {
+
+		for (int i = 0; i < index; i++) {
 			for (int j = arr.length - 1; j > 0; j--) {
 				int temp = arr[j];
 				arr[j] = arr[j - 1];
@@ -49,8 +45,5 @@ public class RotateArray {
 		}
 
 		System.out.println(Arrays.toString(arr));
-
 	}
-	
-	
 }

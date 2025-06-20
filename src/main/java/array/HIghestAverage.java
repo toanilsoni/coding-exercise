@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class HIghestAverage {
+public class HighestAverage {
 
     public static void main(String[] args) {
         String[][] arr = {{"Bob", "87"},

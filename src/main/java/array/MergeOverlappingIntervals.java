@@ -2,39 +2,45 @@
 
 package array;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class MergeOverlappingIntervals {
 
-	public static void main(String[] args) {
+    static List<int[]> mergeOverlap(int[][] arr) {
+        int n = arr.length;
 
-		int[][] matrix = {{1,3}, 
-					      {2,4}, 
-					      {5,7}, 
-					      {6,8}};
+        Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
+        List<int[]> res = new ArrayList<>();
 
-		System.out.println(mergeOverlappingIntervals(matrix));
-		
-	}
+        // Checking for all possible overlaps
+        for (int i = 0; i < n; i++) {
+            int start = arr[i][0];
+            int end = arr[i][1];
 
-	public static int[][] mergeOverlappingIntervals(int[][] matrix) {
-		int [] [] result = new int [matrix.length][matrix[0].length];
-		for(int i=0; i<matrix.length-1; i++) {
-			for(int j=0; j<matrix[0].length-1; j++) {
-				if(matrix[i][1] <= matrix[i+1][1]) {
-					result [i] [j] = matrix[i] [j+1]; 
-				}
-			}
-		}
-			
+            // Skipping already merged intervals
+            if (!res.isEmpty() && res.get(res.size() - 1)[1] >= end) {
+                continue;
+            }
 
-		for(int i=0; i<result.length;i++) {
-			for(int j=0; j<result[0].length; j++) {
-				System.out.println(result[i][j]);	
-			}
-			
-		}
-		
-		return result;
+            // Find the end of the merged range
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j][0] <= end) {
+                    end = Math.max(end, arr[j][1]);
+                }
+            }
+            res.add(new int[]{start, end});
+        }
+        return res;
+    }
 
-	}
+    public static void main(String[] args) {
+        int[][] arr = {{7, 8}, {1, 5}, {2, 4}, {4, 6}};
+        List<int[]> res = mergeOverlap(arr);
 
+        for (int[] interval : res) {
+            System.out.println(interval[0] + " " + interval[1]);
+        }
+    }
 }
