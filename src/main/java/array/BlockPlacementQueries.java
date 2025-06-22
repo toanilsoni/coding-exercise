@@ -18,6 +18,11 @@ public class BlockPlacementQueries {
                 int prev = 0;
                 boolean canPlace = false;
 
+                if (x - sz + 1 <= 0) {
+                    result.add(false);
+                    continue;
+                }
+
                 // Go through each obstacle up to x
                 for (int obs : obstacles.tailSet(0)) {
                     if (obs > x) break; // If an obstacle is beyond x, we stop — we only care about [0, x].
