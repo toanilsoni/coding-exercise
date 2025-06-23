@@ -1,4 +1,4 @@
-//https://workat.tech/problem-solving/approach/bttbass/best-time-to-buy-and-sell-stock
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock
 
 package array;
 
