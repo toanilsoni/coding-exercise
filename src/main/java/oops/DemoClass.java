@@ -18,10 +18,15 @@ public class DemoClass {
 		return firstName;
 	}
 
-	public void setFirstName(String lastName) {
-		this.lastName = lastName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	
+	public String getLastName() {
+		return lastName;
+	}
 
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 }

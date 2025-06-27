@@ -23,7 +23,6 @@ class Person {
     return name;
   }
 
-
 }
 
 
@@ -34,8 +33,7 @@ public class ListToMap {
     personList.add(new Person("1", "Jack"));
     personList.add(new Person("2", "Jack"));
     personList.add(new Person("3", "Jahnavi"));
-    mapOfNameToIds(personList);
-
+    mapNameToIds(personList);
   }
 
   /**
@@ -48,26 +46,26 @@ public class ListToMap {
    * @param persons a list of Person objects
    * @return a Map of "name" to "id"s based on the given `persons`
    */
-  public static Map<String, List<String>> mapOfNameToIds(List<Person> persons) {
+  public static Map<String, List<String>> mapNameToIds(List<Person> persons) {
 
-    Map<String, List<String>> mapOfIdsToName = new HashMap<String, List<String>>();
+    Map<String, List<String>> mapNameToIds = new HashMap<String, List<String>>();
 
     for (Person person : persons) {
       String personName = person.getName();
       String personId = person.getId();
 
-      List<String> existingIds = mapOfIdsToName.get(personName);
+      List<String> existingIds = mapNameToIds.get(personName);
       if (existingIds != null) {
         existingIds.add(personId);
       } else {
         List<String> newList = new ArrayList<String>();
         newList.add(personId);
-        mapOfIdsToName.put(personName, newList);
+        mapNameToIds.put(personName, newList);
       }
     }
 
-    for (Entry<String, List<String>> entry : mapOfIdsToName.entrySet())
+    for (Entry<String, List<String>> entry : mapNameToIds.entrySet())
       System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
-    return mapOfIdsToName;
+    return mapNameToIds;
   }
 }
