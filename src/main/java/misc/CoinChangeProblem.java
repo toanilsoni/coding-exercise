@@ -6,9 +6,7 @@ public class CoinChangeProblem {
 	public static void main(String[] args) {
 
 		int[] coins = { 1, 2 };
-		// 1+1+1+1+1+1
 		// 2+2+1
-		// 2+1+1+1
 
 		System.out.println(findCombination(coins, 5));
 	}
@@ -28,5 +26,4 @@ public class CoinChangeProblem {
 
 		return combinations[amount];
 	}
-
 }

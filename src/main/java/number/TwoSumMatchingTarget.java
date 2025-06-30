@@ -12,18 +12,17 @@ public class TwoSumMatchingTarget {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
 
-        //int[] result = twoSum(nums, target);
+        int[] result = twoSumMatchingTarget(nums, target);
 
-        /*if (result.length == 2) {
+        if (result.length == 2) {
             System.out.println("Indices: [" + result[0] + ", " + result[1] + "]");
         } else {
             System.out.println("No two sum solution found.");
-        }*/
+        }
     }
-}
 
-class Solution {
-    public int[] twoSum(int[] a, int t) {
+
+    public static int[] twoSumMatchingTarget(int[] a, int t) {
         Map<Integer, Integer> m = new HashMap<>();
         for (int i = 0; i < a.length; i++) {
             int x = t - a[i];
