@@ -19,6 +19,7 @@ public class Queue {
 		System.out.println(q.dequeue(1));
 		System.out.println(q.dequeue(2));
 		System.out.println(q.dequeue(3));
+		System.out.println(q.dequeue(3));
 
 	}
 

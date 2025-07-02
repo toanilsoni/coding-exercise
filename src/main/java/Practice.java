@@ -1,65 +1,77 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+/*
+Your task is to compute, for each user:
 
-class Person {
-    String name;
-    String id;
+The earliest and latest access timestamps.
 
-    public Person(String name, String id){
-        this.name = name;
-        this.id = id;
-    }
+Then calculate each user's session duration as:
+latest_timestamp - earliest_timestamp
 
-    public void setString(String name){
-        this.name = name;
-    }
-
-    public String getName(){
-        return name;
-    }
-
-    public void setId(String id){
-        this.id = id;
-    }
-
-    public String getId(){
-        return id;
-    }
-
-}
-
+Finally, return a mapping of each user to their session duration.
+ */
 public class Practice
 {
     public  static void main(String [] args){
-        List<Person> personList = new ArrayList<>();
-        personList.add(new Person("Anil", "1"));
-        personList.add(new Person("Sunil", "2"));
-        personList.add(new Person("Anil", "3"));
+        String[][] logs = new String[][] {
+                { "58523", "user_1", "resource_1" },
+                { "62314", "user_2", "resource_2" },
+                { "54001", "user_1", "resource_3" },
+                { "200", "user_6", "resource_5" },
+                { "215", "user_6", "resource_4" },
+                { "54060", "user_2", "resource_3" },
+                { "53760", "user_3", "resource_3" },
+                { "58522", "user_22", "resource_1" },
+                { "53651", "user_5", "resource_3" },
+                { "2", "user_6", "resource_1" },
+                { "100", "user_6", "resource_6" },
+                { "400", "user_7", "resource_2" },
+                { "100", "user_8", "resource_6" },
+                {"54359", "user_1", "resource_3"},
+        };
 
-        mapNameToIds(personList);
+       System.out.println(highestAvg(logs));
 
     }
 
-    public static void mapNameToIds(List<Person> personList){
-        Map<String, List<String>> personMap = new HashMap<>();
-        for(Person p: personList){
+    public static int highestAvg(String [] [] str) {
 
-            if(personMap.containsKey(p.name)){
-                List<String> existingIds = personMap.get(p.name);
-                existingIds.add(p.getId());
-                personMap.put(p.name, existingIds);
+        Map<String, List<Integer>> logMap = new HashMap<>();
+
+        for(int i=0; i<str.length; i++){
+            if(logMap.containsKey(str[i][1])){
+                List<Integer> existingList = logMap.get(str[i][1]);
+                existingList.add(Integer.valueOf(str[i][0]));
+                logMap.put(str[i][1], existingList);
+
             } else{
-                List<String> newList = new ArrayList<>();
-                newList.add(p.getId());
-                personMap.put(p.name, newList);
+                ArrayList<Integer> newList = new ArrayList<>();
+                newList.add(Integer.valueOf(str[i][0]));
+                logMap.put(str[i][1], newList);
             }
         }
 
-        for(Map.Entry<String, List<String>> mapValue : personMap.entrySet()){
-            System.out.println(mapValue.getKey() + " " + mapValue.getValue());
+        int sessionDuration = 0;
+        for(Map.Entry<String, List<Integer>> mapValue : logMap.entrySet()){
+            Collections.sort(mapValue.getValue(), Collections.reverseOrder());
+            int duration = sessionDuration(mapValue.getValue());
+            System.out.println(duration);
         }
+
+
+        System.out.println(logMap);
+        return sessionDuration;
+    }
+
+    public static  int sessionDuration(List<Integer> numberList){
+        int duration = 0;
+
+        if(numberList.size() == 1){
+            return  0;
+        }
+        for(int number: numberList){
+            duration = numberList.get(0) - + numberList.get(numberList.size()-1);;
+        }
+        return duration;
 
     }
 }

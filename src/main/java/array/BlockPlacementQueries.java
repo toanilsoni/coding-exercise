@@ -40,18 +40,18 @@ public class BlockPlacementQueries {
                 }
 
                 // Iterate over obstacles from 0 up to x
-                for (int obs : obstacles.tailSet(0)) {
+                for (int obs : obstacles.tailSet(0)) { // The loop only checks gaps before each obstacle
                     if (obs > x) break; // If an obstacle is beyond x, we stop — we only care about [0, x].
 
-                    if (obs - prev >= sz) { // Check if the gap between prev (tart of free space) and current obstacle is large enough for the block.
+                    if (obs - prev >= sz) { // Check if the gap between prev (start of free space) and current obstacle is large enough for the block.
                         canPlace = true;
                         break;
                     }
                     prev = obs; // Move prev to obstacle. This means the next free space will start at or after this obstacle (block cannot overlap).
                 }
 
-                // Check after last obstacle to x
-                if (!canPlace && x - prev + 1 > sz) {
+                // Checks gap between the last obstacle and x
+                if (!canPlace && x - prev + 1 > sz) { // number of free positions from prev to x inclusive
                     canPlace = true;
                 }
 

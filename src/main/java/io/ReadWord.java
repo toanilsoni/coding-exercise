@@ -25,5 +25,4 @@ public class ReadWord {
 		System.out.println(count);
 
 	}
-
 }

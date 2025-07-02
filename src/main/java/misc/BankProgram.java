@@ -1,5 +1,9 @@
 package misc;
 // https://leetcode.com/problems/simple-bank-system
+/*
+Time Complexity     O(1)
+Space Complexity	O(n)
+ */
 public class BankProgram {
     public static void main(String[] args) {
         String[] operations = {"Bank", "withdraw", "transfer", "deposit", "transfer", "withdraw"};

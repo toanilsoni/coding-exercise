@@ -1,19 +1,15 @@
 package array;
 
+import java.util.Arrays;
+
 public class SortArrayOfString {
 
 	public static void main(String[] args) {
 
 		String str[] = { "Anil", "AL", "Am", "I" };
 
-		// String [] result = sort(str, str.length);
-
-		String[] result = sortByAlphabeticalOrder(str, str.length);
-
-		for (int i = 0; i < result.length; i++) {
-			System.out.println(result[i] + " ");
-		}
-
+		//System.out.println(Arrays.toString(sortByAlphabeticalOrder(str, str.length)));
+		System.out.println(Arrays.toString(sortByLength(str, str.length)));
 	}
 
 	private static String[] sortByLength(String[] str, int length) {
@@ -34,10 +30,10 @@ public class SortArrayOfString {
 	private static String[] sortByAlphabeticalOrder(String[] str, int length) {
 		for (int i = 0; i < length-1; i++) {
 			for (int j = i+1; j < str.length; j++) {
-				if(str[i].compareTo(str[j]) >0) {
+				if(str[i].compareTo(str[j]) >0) {  // >0 → if str[i] comes after str[j]. If str[i] comes after str[j] in lexicographical order, then swap them.
 					String temp = str[i];
 					str[i] = str[j];
-					str[j] = temp;
+					str[j]=temp;
 					
 				}
 				
