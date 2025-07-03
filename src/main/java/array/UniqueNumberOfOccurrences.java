@@ -1,19 +1,18 @@
 package array;
 /*
-unique frequency of integers in an array
+https://leetcode.com/problems/unique-number-of-occurrences/description/
+Given an integer array, return true if the number of occurrences of each value is unique, otherwise return false.
 */
 
 import java.util.Map;
 
 import java.util.HashMap;
 
-import java.util.Map.Entry;
-
 import java.util.HashSet;
 
 import java.util.Set;
 
-public class UniqueFrequency {
+public class UniqueNumberOfOccurrences {
     public static void main(String args[]) {
         //int [] intArray = {1, 2, 6, 2, 5, 3, 3, 3};
         int[] intArray = {1, 2, 2, 1, 1, 3};

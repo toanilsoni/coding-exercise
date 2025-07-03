@@ -33,10 +33,9 @@ public class RotateArray {
 
 	}
 	
-	public static void rotateArrayApproach2(int[] arr, int size, int index) {
-		//{ 1, 2, 3, 4, 5, 6, 7 };
+	public static void rotateArrayApproach2(int[] arr, int size, int k) {
 
-		for (int i = 0; i < index; i++) {
+		for (int i = 0; i < k; i++) {
 			for (int j = arr.length - 1; j > 0; j--) {
 				int temp = arr[j];
 				arr[j] = arr[j - 1];

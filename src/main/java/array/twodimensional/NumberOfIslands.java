@@ -1,5 +1,9 @@
 package array.twodimensional;
-
+/* https://leetcode.com/problems/number-of-islands
+https://leetcode.com/problems/number-of-islands/solutions/6762648/easy-java-dfs-solution-beats-99-submissions/
+Time complexity:O(m * n)
+Space complexity:O(m * n)
+*/
 public class NumberOfIslands {
 
     public static int numIslands(char[][] grid) {
@@ -33,10 +37,11 @@ public class NumberOfIslands {
         grid[i][j] = '0'; // Mark as visited
 
         // Visit all 4 adjacent cells
-        dfs(grid, i + 1, j); // down
         dfs(grid, i - 1, j); // up
-        dfs(grid, i, j + 1); // right
+        dfs(grid, i + 1, j); // down
         dfs(grid, i, j - 1); // left
+        dfs(grid, i, j + 1); // right
+
     }
 
     // Example usage

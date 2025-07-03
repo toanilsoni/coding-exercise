@@ -1,4 +1,12 @@
-//https://leetcode.com/problems/longest-consecutive-sequence/solution/
+/*https://leetcode.com/problems/longest-consecutive-sequence/solution/
+Time Complexity: O(n log n)
+Arrays.sort(numbers) takes O(n log n) time — this is the dominant term.
+The for loop runs O(n) times to find the longest consecutive sequence.
+
+Space Complexity: O(1) (or O(n) depending)
+If sorting is in-place (as with Arrays.sort() for primitive arrays like int[]), the extra space is O(1).
+If you’re using a version of sort that creates a new array (like sorting Integer[]), it would be O(n).
+ */
 package array;
 
 import java.util.Arrays;

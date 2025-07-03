@@ -13,9 +13,8 @@ public class RemoveDuplicatesFromArray {
 
 		Integer[] numbers = { 1, 1, 2, 2, 3, 4, 5 };
 
-		System.out.println(removeDuplicatesFromArrayStream(numbers));
-		//System.out.println(Arrays.toString(removeDuplicatesFromArray(numbers)));
-
+		//System.out.println(removeDuplicatesFromArrayStream(numbers));
+		System.out.println(Arrays.toString(removeDuplicatesFromArray(numbers)));
 	}
 
 	public static List<Integer> removeDuplicatesFromArrayStream(Integer[] numbers) {
@@ -28,23 +27,21 @@ public class RemoveDuplicatesFromArray {
 		return result;
 	}
 
-	public static int[] removeDuplicatesFromArray(int[] numbers) {
-
+	public static int[] removeDuplicatesFromArray(Integer[] numbers) {
 		Arrays.sort(numbers);
-		int result[] = new int[numbers.length];
-		int previous = numbers[0];
-		result[0] = previous;
+
+		int[] result = new int[numbers.length];
+		result[0] = numbers[0];
+		int index = 1;
 
 		for (int i = 1; i < numbers.length; i++) {
-
-			if (previous != numbers[i]) {
-				result[i] = numbers[i];
+			if (!numbers[i].equals(numbers[i - 1])) {
+				result[index++] = numbers[i];
 			}
-			previous = numbers[i];
-
 		}
 
-		return result;
+		return Arrays.copyOf(result, index);
 	}
+
 
 }

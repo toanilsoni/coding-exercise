@@ -3,11 +3,10 @@
 package array;
 
 import java.util.*;
-import java.util.Map.Entry;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class SortArrayByFrequency {
+public class SortArrayOfNumbersByFrequency {
 
     public static void main(String[] args) {
 

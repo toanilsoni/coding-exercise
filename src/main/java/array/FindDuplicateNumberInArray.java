@@ -12,11 +12,11 @@ public class FindDuplicateNumberInArray {
 
 		Integer[] numbers = { 1, 2, 3, 4, 2};
 
-		//findDuplicateNumberInArray(numbers);
+		findDuplicateNumberInArray(numbers);
 
 		//printRepeating(numbers, numbers.length);
 
-		printDuplicateElementsFromArray(numbers);
+		//printDuplicateElementsFromArray(numbers);
 	}
 
 	public static void printDuplicateElementsFromArray(Integer[] array) {
@@ -31,7 +31,7 @@ public class FindDuplicateNumberInArray {
 
 	}
 
-	public static void findDuplicateNumberInArray(int[] numbers) {
+	public static void findDuplicateNumberInArray(Integer[] numbers) {
 
 		HashMap<Integer, Integer> numberMap = new HashMap<>();
 
@@ -45,13 +45,13 @@ public class FindDuplicateNumberInArray {
 
 		for (Map.Entry<Integer, Integer> map : numberMap.entrySet()) {
 			if (map.getValue() > 1) {
-				System.out.print("Key " + map.getKey() + " Value " + map.getValue() + "\n");
+				System.out.print("Duplicate Number: " + map.getKey() + "\n");
 			}
 
 		}
 	}
 
-	public static void printRepeating(int arr[], int size) {
+	public static void printRepeating(Integer arr[], int size) {
 		int i, j;
 		System.out.println("Repeated Elements are :");
 		for (i = 0; i < size - 1; i++) {

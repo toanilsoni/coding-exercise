@@ -2,6 +2,12 @@ package array;
 
 /*
 pivot index, An index i such that the sum of all elements to the left of i is equal to the sum of all elements to the right of i
+Step 1: O(n) → Calculating total sum of array.
+Step 2: O(n) → Iterating through the array once to check for pivot index.
+Total Time: O(n)
+
+No extra space used except constant variables (total, leftSum, rightSum).
+Space: O(1)
 */
 
 import java.util.Map;
