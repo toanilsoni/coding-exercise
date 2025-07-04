@@ -10,7 +10,7 @@ package number;
 
 import java.util.Arrays;
 
-public class SortedSquares {
+public class SortedArraySquares {
     public static void main(String[] args) {
         int[] nums = {-4, -1, 0, 3, 10};  // Sample input
 

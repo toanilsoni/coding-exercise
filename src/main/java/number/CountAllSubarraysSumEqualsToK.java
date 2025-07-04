@@ -14,17 +14,17 @@ public class CountAllSubarraysSumEqualsToK {
 		int count = 0;
 
 		// Brute-force: check all subarrays
-		for (int start = 0; start < nums.length; start++) {
+		for (int i = 0; i < nums.length; i++) {
 			int sum = 0;
-			for (int end = start; end < nums.length; end++) {
-				sum += nums[end];
+			for (int j = i; j < nums.length; j++) {
+				sum += nums[j];
 
-				if (sum == k) {
+				if(sum == k){
 					count++;
 					// Print the subarray
 					System.out.print("{ ");
-					for (int i = start; i <= end; i++) {
-						System.out.print(nums[i] + " ");
+					for(int m = i; m <= j; m++){
+						System.out.print(nums[m] + " ");
 					}
 					System.out.println("}");
 				}

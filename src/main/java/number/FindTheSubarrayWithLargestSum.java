@@ -4,7 +4,6 @@ public class FindTheSubarrayWithLargestSum {
 
 	public static void main(String[] args) {
 		int[] nums = {1, 2, 3};
-		int length = nums.length;
 
 		System.out.println(countAllSubarraysSumEqualsToK(nums));
 	}
@@ -14,10 +13,10 @@ public class FindTheSubarrayWithLargestSum {
 		int largestSum = nums[0];
 
 		// Brute-force: check all subarrays
-		for (int start = 0; start < nums.length; start++) {
+		for (int i = 0; i < nums.length; i++) {
 			int sum = 0;
-			for (int end = start; end < nums.length; end++) {
-				sum += nums[end];
+			for (int j = i; j < nums.length; j++) {
+				sum += nums[j];
 				largestSum = Math.max(largestSum,sum);
 			}
 		}
