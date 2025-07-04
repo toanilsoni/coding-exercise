@@ -14,7 +14,7 @@ public class Remove3ConsecutiveDuplicates {
 
 	public static String remove3ConsecutiveDuplicates(String str) {
 
-		Vector<Character> vChar = new Vector<>();
+		Vector<Character> vChar = new Vector<>(); // Vector automatically resizes as elements are added or removed
 
 		for (int i = 0; i < str.length(); i++) {
 			vChar.add(str.charAt(i));

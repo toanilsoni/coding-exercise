@@ -6,7 +6,7 @@ public class ReverseWordOfString {
 
 	public static void main(String[] args) {
 
-		String str1 = "Anil Soni";
+			String str1 = "Anil Soni";
 
 		reverseWordOfString(str1);
 
