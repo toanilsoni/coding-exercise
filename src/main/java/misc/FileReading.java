@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class FileReadClass {
+public class FileReading {
 
 	public static void main(String[] args) throws IOException {
 		// bufferReader();
@@ -16,7 +16,7 @@ public class FileReadClass {
 	}
 
 	public static void bufferReader() throws IOException {
-		File file = new File("/Users/asoni/Documents/File.txt");
+		File file = new File("word.txt");
 
 		BufferedReader br = new BufferedReader(new FileReader(file));
 
@@ -27,7 +27,7 @@ public class FileReadClass {
 	}
 
 	public static void fileReader() throws IOException {
-		FileReader fl = new FileReader("/Users/asoni/Documents/File.txt");
+		FileReader fl = new FileReader("word.txt");
 
 		int i;
 
@@ -38,7 +38,7 @@ public class FileReadClass {
 
 	public static void fileScanner() throws FileNotFoundException {
 
-		File fl = new File("/Users/asoni/Documents/File.txt");
+		File fl = new File("word.txt");
 		Scanner sc = new Scanner(fl);
 
 		while (sc.hasNext()) {
@@ -49,7 +49,7 @@ public class FileReadClass {
 
 	public static void fileScannerCommaSeparatedFile() throws FileNotFoundException {
 
-		File fl = new File("/Users/asoni/Documents/CommaSeparated.txt");
+		File fl = new File("CommaSeparated.txt");
 		Scanner sc = new Scanner(fl);
 
 		while (sc.hasNext()) {

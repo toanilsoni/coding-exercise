@@ -1,8 +1,14 @@
 package array;
+/*
+Time: O(n) — one full pass from both sides
+
+Space: O(1) — no extra space, just a few variables
+ */
 public class RainDropTrap2Pointer {
 
     public static void main(String[] args) {
-        int [] arr = {3, 0, 2, 0, 4};
+        //int [] arr = {3, 0, 2, 0, 4};
+        int [] arr = {0, 1, 0, 2, 0, 2};
         int length = arr.length;
 
         System.out.println(trap(arr, length));

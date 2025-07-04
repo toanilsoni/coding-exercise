@@ -1,6 +1,16 @@
-//https://howtodoinjava.com/java/puzzles/fizzbuzz-solution-java/ 
-package misc;
+/* https://howtodoinjava.com/java/puzzles/fizzbuzz-solution-java/
+Print numbers from 1 to N (in your case, N = 36), but:
 
+If a number is divisible by 5, print "Fizz"
+
+If a number is divisible by 7, print "Buzz"
+
+If a number is divisible by both 5 and 7, print "FizzBuzz"
+
+Otherwise, print the number itself
+ */
+
+package misc;
 import java.awt.im.InputContext;
 import java.io.InputStream;
 import java.util.stream.IntStream;

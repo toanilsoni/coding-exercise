@@ -5,8 +5,10 @@ public class CoinChangeProblem {
 
 	public static void main(String[] args) {
 
-		int[] coins = { 1, 2 };
-		// 2+2+1
+		int[] coins = { 1,2,5 };
+		/* 1+1+1+1+1
+		1+1+1+2
+		1+2+2 */
 
 		System.out.println(findCombination(coins, 5));
 	}

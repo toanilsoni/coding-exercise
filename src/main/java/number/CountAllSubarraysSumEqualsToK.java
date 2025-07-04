@@ -4,7 +4,6 @@ public class CountAllSubarraysSumEqualsToK {
 
 	public static void main(String[] args) {
 		int[] nums = {1, 2, 3};
-		int length = nums.length;
 		int k = 3;
 
 		System.out.println(countAllSubarraysSumEqualsToK(nums, k));

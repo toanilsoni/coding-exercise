@@ -12,10 +12,10 @@ public class RotateArray {
 		int k = 3;
 
 		//rotateArray(array, array.length, k);
-		rotateArrayApproach2(array, array.length, k);
+		rotateArrayApproach2(array, k);
 	}
 
-	public static void rotateArray(int[] array, int size, int k) {
+	public static void rotateArray(int[] array, int k) {
 
 		int result[] = new int[array.length];
 
@@ -33,7 +33,7 @@ public class RotateArray {
 
 	}
 	
-	public static void rotateArrayApproach2(int[] arr, int size, int k) {
+	public static void rotateArrayApproach2(int[] arr, int k) {
 
 		for (int i = 0; i < k; i++) {
 			for (int j = arr.length - 1; j > 0; j--) {

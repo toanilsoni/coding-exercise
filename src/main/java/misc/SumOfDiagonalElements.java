@@ -5,7 +5,9 @@ public class SumOfDiagonalElements {
 
 	public static void main(String[] args) {
 
-		int[][] matrix = { { 1, 2, 5 }, { 4, 5, 6 }, { 3, 3, 6 } };
+		int[][] matrix = { { 1, 2, 5 },
+				           { 4, 5, 6 },
+				           { 3, 3, 6 } };
 		sumOfDiagonalElements(matrix);
 	}
 

@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class ReadWord {
+public class ReadWordFile {
 
 	public static void main(String[] args) {
         int count =0;
