@@ -1,10 +1,7 @@
 
 package string;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -14,8 +11,28 @@ public class PrintDuplicateElementsFromArray {
 
 		String[] array = { "rest", "java", "world", "java", "anil", "anil" };
 
-		printDuplicateElementsFromArray(array);
+		findDuplicateNumberInArray(array);
 	}
+
+	public static void findDuplicateNumberInArray(String[] array) {
+
+		HashMap<String, Integer> stringMap = new HashMap<>();
+
+		for (int k = 0; k < array.length; k++) {
+			if (stringMap.containsKey(array[k])) {
+				stringMap.put(array[k], stringMap.get(array[k]) + 1);
+			} else {
+				stringMap.put(array[k], 1);
+			}
+		}
+
+		for (Map.Entry<String, Integer> map : stringMap.entrySet()) {
+			if (map.getValue() > 1) {
+				System.out.print("Duplicate String: " + map.getKey() + "\n");
+			}
+		}
+
+		}
 
 	public static void printDuplicateElementsFromArray(String[] array) {
 

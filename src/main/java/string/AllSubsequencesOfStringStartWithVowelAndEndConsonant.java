@@ -5,7 +5,7 @@ package string;
 
 import java.util.HashSet;
 
-public class StringStartVowelAndEndConsonant {
+public class AllSubsequencesOfStringStartWithVowelAndEndConsonant {
 
 	static HashSet<String> hsString = new HashSet<>();
 

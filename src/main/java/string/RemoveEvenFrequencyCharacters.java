@@ -31,9 +31,9 @@ public class RemoveEvenFrequencyCharacters {
 		StringBuilder sb = new StringBuilder();
 		for (Entry<Character, Integer> entry : charMap.entrySet()) {
 			int frequency = entry.getValue();
-			System.out.println("Value " + entry.getValue());
+			//System.out.println("Value " + entry.getValue());
 			if (entry.getValue() % 2 == 0) {
-				System.out.println("even");
+				//System.out.println("even");
 			} else {
 				while (frequency >= 1) {
 					sb.append(entry.getKey());
